@@ -1,24 +1,11 @@
-# Redis Server
-redis:
-  image: redis
-  volumes:
-    - /srv/mydir/database/redis/data:/data
-  restart: always
-#wechat app
-wx:
-  image: ynuae/wss-wx
+concepts_restful_api:
+  image: na57/concepts-rest
   ports:
-    - "35003:18080"
+    - "35007:18080"
   links:
     - redis:redis
+  external_links:
+    - neo4j_neo4j_1:neo4j
   environment:
-    - QYH_CORPID=corpId
-    - QYH_SECRET=secret
-    - NOTICE_TOKEN=token
-    - NOTICE_AESKEY=aeskey
-    - NOTICE_AGENTID=4
-    - USER_TOKEN=token
-    - USER_AESKEY=aeskey
-    - USER_AGENTID=26
-    - WSS_DB_URI=mysql://user:pass@host/tankdb
+    - NEO_HOST=http://neo4j:7474
   restart: always
