@@ -1,9 +1,7 @@
-concepts_restful_api:
+conceptRestful:
   image: na57/concepts-rest
   ports:
     - "35007:18080"
-  links:
-    - redis:redis
   external_links:
     - neo4j_neo4j_1:neo4j
   environment:
