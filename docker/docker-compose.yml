@@ -1,5 +1,5 @@
 concepts_restful_api:
-  image: na57/concepts-rest
+  image: na57/concepts-rest:1.0
   ports:
     - "35007:18080"
   links:
