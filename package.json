@@ -28,5 +28,18 @@
     "should": "^7.0.3",
     "time-grunt": "~1.0.0",
     "urllib": "^2.3.9"
-  }
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nagucc/concepts.git"
+  },
+  "author": "na57",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/nagucc/concepts/issues"
+  },
+  "homepage": "https://github.com/nagucc/concepts"
 }
