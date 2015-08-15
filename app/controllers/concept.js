@@ -49,7 +49,7 @@ var endIfError = function(req, res, next){
 /*
 获取指定id的Concept
 */
-router.get('/:id', prepareId, M.get(), endIfError, M.names(), M.descs(), sendConcept);
+router.get('/:id', prepareId, M.getOne(), endIfError, M.names(), M.descs(), sendConcept);
 
 
 /*
@@ -69,7 +69,7 @@ router.get('/by-name/:name', function(req, res, next){
 /*
 创建Concept
 */
-router.put('/', M.create(), 
+router.put('/', M.addNew(), 
     function(req, res, next){
         req.concept.name = req.body.name;
         req.concept.desc = req.body.desc;
