@@ -11,6 +11,7 @@ describe('Concept model test', function () {
 
 	var id = null;
 	it('create.创建Concept', function (done) {
+		this.timeout(15000);
 		urllib.request(base, {
 			type: 'PUT',
 			data: {
@@ -28,6 +29,7 @@ describe('Concept model test', function () {
 	});
 
 	it('get.获取Concept', function (done) {
+		this.timeout(15000);
 		urllib.request(base + id, {
 			type: 'GET'
 		}, function(err, data){
@@ -42,6 +44,7 @@ describe('Concept model test', function () {
 	});
 	
 	it('添加Concept的name', function(done){
+		this.timeout(15000);
 		urllib.request(base + id + '/name', {
 			type: 'PUT',
 			data: {
@@ -70,6 +73,7 @@ describe('Concept model test', function () {
 	});
 	
 	it('添加Desc', function(done){
+		this.timeout(15000);
 		urllib.request(base + id + '/desc', {
 			type: 'PUT',
 			data: {
@@ -96,6 +100,7 @@ describe('Concept model test', function () {
 	});
 	
 	it('findByName', function(done){
+		this.timeout(15000);
 		urllib.request(base + '/by-name/restName', {
 			type: 'GET'
 		}, function(err, data){
@@ -107,6 +112,7 @@ describe('Concept model test', function () {
 	});
 	
 	it('删除Concept的name', function(done){
+		this.timeout(15000);
 		urllib.request(base + id + '/name', {
 			type: 'DELETE',
 			data: {
@@ -134,6 +140,7 @@ describe('Concept model test', function () {
 	});
 	
 	it('删除desc', function(done){
+		this.timeout(15000);
 		urllib.request(base + id + '/desc', {
 			type: 'DELETE',
 			data: {
@@ -160,6 +167,7 @@ describe('Concept model test', function () {
 	
 	
 	it('删除Concept', function (done) {
+		this.timeout(15000);
 		urllib.request(base + id, {
 			type: 'DELETE'
 		}, function(err, data){
